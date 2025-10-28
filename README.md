@@ -24,7 +24,7 @@ It uses **Sentence-T5** for text encoding and a **PatchTST-style Transformer enc
 
 ---
 
-🧩 Core Components
+## 🧩 Core Components
 Component	Description
 - 🗣️ Sentence-T5 Encoder	Encodes tweets into 768-d text embeddings
 - 🔁 T5ProjectionHead	Maps text embeddings into shared latent space
@@ -34,7 +34,7 @@ Component	Description
 
 ---
 
-💡 Future Work
+## 💡 Future Work
 
 - Integrate tweet sentiment or news polarity features
 - Add attention-based fusion of multiple daily tweets
