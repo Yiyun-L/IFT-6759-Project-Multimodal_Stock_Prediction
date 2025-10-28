@@ -24,33 +24,19 @@ It uses **Sentence-T5** for text encoding and a **PatchTST-style Transformer enc
 
 ---
 
-## 📂 Project Structure
-├── data/
-│ ├── stock_tweets.csv # Raw tweet data with Stock Name and Date
-│ ├── stock_yfinance_data.csv # Stock prices (Date, Close, etc.)
-│
-├── main.ipynb # Jupyter Notebook containing full pipeline
-│
-└── README.md
-
+🧩 Core Components
+Component	Description
+- 🗣️ Sentence-T5 Encoder	Encodes tweets into 768-d text embeddings
+- 🔁 T5ProjectionHead	Maps text embeddings into shared latent space
+- 📊 PatchTSTEncoder	Transformer-based encoder for stock time series patches
+- 🎯 Contrastive Loss	Symmetric InfoNCE loss between tweet and time-series pairs
+- 📈 Evaluation	Measures Recall@K and Mean Reciprocal Rank (MRR)
 
 ---
 
-🧩 Core Components
-Component	Description
-🗣️ Sentence-T5 Encoder	Encodes tweets into 768-d text embeddings
-🔁 T5ProjectionHead	Maps text embeddings into shared latent space
-📊 PatchTSTEncoder	Transformer-based encoder for stock time series patches
-🎯 Contrastive Loss	Symmetric InfoNCE loss between tweet and time-series pairs
-📈 Evaluation	Measures Recall@K and Mean Reciprocal Rank (MRR)
-
-
 💡 Future Work
 
-Integrate tweet sentiment or news polarity features
-
-Add attention-based fusion of multiple daily tweets
-
-Extend to multi-feature stock signals (Open, High, Low, Volume)
-
-Experiment on multi-market or sector generalization
+- Integrate tweet sentiment or news polarity features
+- Add attention-based fusion of multiple daily tweets
+- Extend to multi-feature stock signals (Open, High, Low, Volume)
+- Experiment on multi-market or sector generalization
